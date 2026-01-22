@@ -1,0 +1,56 @@
+@import url("./variables.css");
+
+html.is-lock {
+  overflow: hidden;
+}
+
+body {
+  font-size: clamp(14px, 16px, 18px);
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.is-loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  transition-duration: var(--transition-duration);
+}
+
+a:not([class]) {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary-hover);
+    text-decoration-color: currentColor;
+  }
+
+  &:active {
+    color: var(--color-primary-active);
+  }
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 4px;
+  transition-duration: 0s !important;
+}

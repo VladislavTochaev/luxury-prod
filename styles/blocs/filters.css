@@ -1,0 +1,120 @@
+.filters {
+  width: 95%;
+  padding: 20px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.filters__list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.filters__item {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.filters__option {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color var(--transition-duration) ease;
+}
+
+.filters__option:hover {
+  color: var(--color-primary);
+}
+
+.filters__option:hover .filters__input {
+  border-color: var(--color-primary);
+}
+
+.filters__input {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.filters__input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.filters__input:not(:checked)::after {
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.5;
+}
+
+.filters__input:user-invalid {
+  border-color: var(--color-error);
+}
+
+.filters__input::after {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: bold;
+  transition-duration: var(--transition-duration);
+}
+
+.filters__input:checked::after {
+  opacity: 1;
+  visibility: visible;
+  translate: -50% -50%;
+  scale: 1;
+}
+
+.filters__text {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  transition-duration: var(--transition-duration);
+}
+
+.filters__input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1280px) {
+  .filters {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    padding: 10px;
+  }
+
+  .filters__list {
+    column-gap: 10px;
+  }
+
+  .filters__item,
+  .filters__option {
+    column-gap: 6px;
+  }
+}
+

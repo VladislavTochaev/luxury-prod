@@ -1,0 +1,30 @@
+.logo {
+  max-width: clamp(126px, 150px, 179px);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    font-size: var(--font-size-xl);
+  }
+}

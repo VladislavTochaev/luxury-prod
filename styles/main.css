@@ -1,0 +1,13 @@
+@import url("normalize.css");
+@import url("variables.css");
+@import url("utils.css");
+@import url("globals.css");
+
+@import url("blocs/logo.css");
+@import url("blocs/header.css");
+@import url("blocs/filters.css");
+@import url("blocs/product-card.css");
+@import url("blocs/skeleton.css");
+@import url("blocs/products.css");
+@import url("blocs/cart.css");
+@import url("blocs/error-state.css");
