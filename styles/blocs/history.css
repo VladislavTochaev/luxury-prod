@@ -16,6 +16,10 @@
 }
 
 .history__item {
+
+}
+
+.history__card {
   padding: var(--space-24);
   background-color: var(--color-surface);
   box-shadow: var(--shadow);

@@ -71,7 +71,8 @@ class History {
   `).join('') || ''
 
     return `
-    <article class="history__item" data-test-id="orders-item">
+    <li class="history__item">
+      <article class="history__card" data-test-id="orders-item">
       <header class="history__header">
         <div>
           <h2 class="history__order-number">
@@ -89,6 +90,7 @@ class History {
         <span class="history__total-amount">Total: ${this.formatPrice(total)}</span>
       </footer>
     </article>
+    </li>
   `
   }
 
@@ -128,9 +130,9 @@ class History {
     const ordersHtml = sortedHistory.map(order => this.createOrderItem(order)).join('')
 
     this.historyContentElement.innerHTML = `
-      <div class="history__list" data-test-id="orders-list">
+      <ul class="history__list" data-test-id="orders-list">
         ${ordersHtml}
-      </div>
+      </ul>
     `
   }
 
