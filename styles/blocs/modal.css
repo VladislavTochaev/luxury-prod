@@ -271,6 +271,7 @@
   .modal__card {
     grid-template-columns: 1fr;
     max-width: 360px;
+    max-height: 80vh;
     translate: 40px;
   }
 
