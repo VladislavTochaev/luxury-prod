@@ -13,7 +13,7 @@
     http-equiv="X-UA-Compatible"
     content="ie=edge"
   />
-  <title>PROD 2</title>
+  <title>Luxury | Home</title>
   <link
     rel="stylesheet"
     href="./styles/main.css"
@@ -44,7 +44,7 @@
             title="Search"
             aria-label="Search"
           >
-            <span class="header__menu-link-icon">
+            <span class="header__menu-icon">
               <svg viewBox="0 0 24 24" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -58,8 +58,9 @@
             href="cart.html"
             title="Cart"
             aria-label="Cart"
+            data-test-id="menu-cart"
           >
-            <span class="header__menu-link-icon">
+            <span class="header__menu-icon">
               <svg  viewBox="0 0 800 800" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                   <path d="M250 600C277.614 600 300 622.387 300 650C300 677.613 277.614 700 250 700C222.386 700 200 677.613 200 650C200 622.387 222.386 600 250 600Z"
@@ -70,16 +71,18 @@
                         stroke="black" stroke-width="50" stroke-linecap="round"/>
               </svg>
             </span>
+            <span class="header__menu-icon--cart cart__counter visually-hidden" data-test-id="cart-badge"></span>
           </a>
         </li>
         <li class="header__menu-item">
           <a
             class="header__menu-link"
-            href="./pages/profile.html"
+            href="profile.html"
             title="Profile"
             aria-label="Profile"
+            data-test-id="menu-profile"
           >
-            <span class="header__menu-link-icon">
+            <span class="header__menu-icon">
               <svg fill="#000000" viewBox="0 0 24 24"
                    xmlns="http://www.w3.org/2000/svg">
                   <path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM4,23H20a1,1,0,0,0,1-1V18a5.006,5.006,0,0,0-5-5H8a5.006,5.006,0,0,0-5,5v4A1,1,0,0,0,4,23Zm1-5a3,3,0,0,1,3-3h8a3,3,0,0,1,3,3v3H5Z"/>
@@ -90,11 +93,12 @@
         <li class="header__menu-item">
           <a
             class="header__menu-link"
-            href="./pages/history.html"
+            href="history.html"
             title="History"
             aria-label="History"
+            data-test-id="menu-history"
           >
-            <span class="header__menu-link-icon">
+            <span class="header__menu-icon">
               <svg viewBox="0 0 800 800" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                   <path d="M400 266.667V400L483.333 483.333" stroke="black" stroke-width="50"
@@ -113,7 +117,7 @@
             aria-label="Switch theme"
             data-test-id="theme-toggle"
           >
-            <span class="header__menu-link-icon">
+            <span class="header__menu-icon">
               <svg class="theme-icon theme-icon--sun" data-js-sun-icon viewBox="0 0 24 24" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 1C11 0.447715 11.4477 0 12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1Z"
@@ -162,7 +166,7 @@
   </div>
 </header>
 <main>
-  <section class="products">
+  <section class="products" data-js-products>
     <div class="products__filters filters container">
       <ul class="filters__list">
         <li class="filters__item">
@@ -172,7 +176,8 @@
               name="category"
               value="yacht"
               type="checkbox"
-            >
+              data-test-id="filter"
+            />
             <span class="filters__text">Yacht</span>
           </label>
         </li>
@@ -183,7 +188,8 @@
               name="category"
               value="plane"
               type="checkbox"
-            >
+              data-test-id="filter"
+            />
             <span class="filters__text">Plane</span>
           </label>
         </li>
@@ -194,7 +200,8 @@
               name="category"
               value="mansion"
               type="checkbox"
-            >
+              data-test-id="filter"
+            />
             <span class="filters__text">Mansion</span>
           </label>
         </li>
@@ -216,7 +223,7 @@
       <div class="products__grid">
         <ul class="products__list" data-test-id="product-list">
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -227,7 +234,7 @@
             </article>
           </li>
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -238,7 +245,7 @@
             </article>
           </li>
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -249,52 +256,7 @@
             </article>
           </li>
           <li class="products__item">
-            <article class="product-card skeleton">
-              <div class="product-card__media skeleton-box"></div>
-              <div class="product-card__body">
-                <div class="skeleton-line skeleton-line--sm"></div>
-                <div class="skeleton-line skeleton-line--lg"></div>
-                <div class="skeleton-line skeleton-line--wd"></div>
-                <div class="skeleton-line skeleton-line--md"></div>
-              </div>
-            </article>
-          </li>
-
-          <li class="products__item">
-            <article class="product-card skeleton">
-              <div class="product-card__media skeleton-box"></div>
-              <div class="product-card__body">
-                <div class="skeleton-line skeleton-line--sm"></div>
-                <div class="skeleton-line skeleton-line--lg"></div>
-                <div class="skeleton-line skeleton-line--wd"></div>
-                <div class="skeleton-line skeleton-line--md"></div>
-              </div>
-            </article>
-          </li>
-          <li class="products__item">
-            <article class="product-card skeleton">
-              <div class="product-card__media skeleton-box"></div>
-              <div class="product-card__body">
-                <div class="skeleton-line skeleton-line--sm"></div>
-                <div class="skeleton-line skeleton-line--lg"></div>
-                <div class="skeleton-line skeleton-line--wd"></div>
-                <div class="skeleton-line skeleton-line--md"></div>
-              </div>
-            </article>
-          </li>
-          <li class="products__item">
-            <article class="product-card skeleton">
-              <div class="product-card__media skeleton-box"></div>
-              <div class="product-card__body">
-                <div class="skeleton-line skeleton-line--sm"></div>
-                <div class="skeleton-line skeleton-line--lg"></div>
-                <div class="skeleton-line skeleton-line--wd"></div>
-                <div class="skeleton-line skeleton-line--md"></div>
-              </div>
-            </article>
-          </li>
-          <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -306,7 +268,7 @@
           </li>
 
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -317,7 +279,7 @@
             </article>
           </li>
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -328,7 +290,7 @@
             </article>
           </li>
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>
@@ -339,7 +301,52 @@
             </article>
           </li>
           <li class="products__item">
-            <article class="product-card skeleton">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
+              <div class="product-card__media skeleton-box"></div>
+              <div class="product-card__body">
+                <div class="skeleton-line skeleton-line--sm"></div>
+                <div class="skeleton-line skeleton-line--lg"></div>
+                <div class="skeleton-line skeleton-line--wd"></div>
+                <div class="skeleton-line skeleton-line--md"></div>
+              </div>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
+              <div class="product-card__media skeleton-box"></div>
+              <div class="product-card__body">
+                <div class="skeleton-line skeleton-line--sm"></div>
+                <div class="skeleton-line skeleton-line--lg"></div>
+                <div class="skeleton-line skeleton-line--wd"></div>
+                <div class="skeleton-line skeleton-line--md"></div>
+              </div>
+            </article>
+          </li>
+          <li class="products__item">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
+              <div class="product-card__media skeleton-box"></div>
+              <div class="product-card__body">
+                <div class="skeleton-line skeleton-line--sm"></div>
+                <div class="skeleton-line skeleton-line--lg"></div>
+                <div class="skeleton-line skeleton-line--wd"></div>
+                <div class="skeleton-line skeleton-line--md"></div>
+              </div>
+            </article>
+          </li>
+          <li class="products__item">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
+              <div class="product-card__media skeleton-box"></div>
+              <div class="product-card__body">
+                <div class="skeleton-line skeleton-line--sm"></div>
+                <div class="skeleton-line skeleton-line--lg"></div>
+                <div class="skeleton-line skeleton-line--wd"></div>
+                <div class="skeleton-line skeleton-line--md"></div>
+              </div>
+            </article>
+          </li>
+          <li class="products__item">
+            <article class="product-card skeleton" data-test-id="skeleton-card">
               <div class="product-card__media skeleton-box"></div>
               <div class="product-card__body">
                 <div class="skeleton-line skeleton-line--sm"></div>

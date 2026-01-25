@@ -1,8 +1,6 @@
 class ThemeSwitcher {
   selectors = {
     switchThemeButton: '[data-test-id="theme-toggle"]',
-    sunIcon: '[data-js-sun-icon]',
-    moonIcon: '[data-js-moon-icon]',
   }
 
   themes = {
@@ -19,8 +17,6 @@ class ThemeSwitcher {
 
   constructor() {
     this.switchThemeButtonElement = document.querySelector(this.selectors.switchThemeButton)
-    this.sunIcon = this.switchThemeButtonElement.querySelector(this.selectors.sunIcon)
-    this.moonIcon = this.switchThemeButtonElement.querySelector(this.selectors.moonIcon)
     this.setInitialTheme()
     this.bindEvents()
   }
@@ -48,7 +44,7 @@ class ThemeSwitcher {
     this.animateIcons(!this.isDarkThemeCached)
   }
 
-  animateIcons(isDark) {
+  animateIcons() {
     this.switchThemeButtonElement.classList.add(this.stateClasses.themeSwitching)
 
     setTimeout(() => {

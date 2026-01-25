@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Luxury | History</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='48' font-weight='bold' fill='%2333808c'>LX</text></svg>">
+  <script src="scripts/App.js" type="module" defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="header__inner container">
+    <a class="header__logo logo" href="/" aria-label="Home" title="Home">
+      Luxury
+    </a>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <button class="header__menu-link" type="button" title="Search" aria-label="Search">
+            <span class="header__menu-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="cart.html" title="Cart" aria-label="Cart" data-test-id="menu-cart">
+            <span class="header__menu-icon">
+              <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M250 600C277.614 600 300 622.387 300 650C300 677.613 277.614 700 250 700C222.386 700 200 677.613 200 650C200 622.387 222.386 600 250 600Z"
+                      stroke="currentColor" stroke-width="50"/>
+                <path d="M550 600.003C577.613 600.003 600 622.387 600 650.003C600 677.617 577.613 700.003 550 700.003C522.387 700.003 500 677.617 500 650.003C500 622.387 522.387 600.003 550 600.003Z"
+                      stroke="currentColor" stroke-width="50"/>
+                <path d="M66.6667 100L75.3737 103.061C118.76 118.315 140.453 125.942 152.861 144.099C165.269 162.257 165.269 186.375 165.269 234.612V325.333C165.269 423.387 167.377 455.743 196.257 486.207C225.137 516.667 271.619 516.667 364.583 516.667H400M541.347 516.667C593.38 516.667 619.397 516.667 637.787 501.68C656.177 486.693 661.43 461.213 671.933 410.25L688.593 329.425C700.163 271.456 705.947 242.472 691.15 223.236C676.353 204 625.793 204 569.627 204H367.45M165.269 204H233.333"
+                      stroke="currentColor" stroke-width="50" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="header__menu-icon--cart cart__counter visually-hidden" data-test-id="cart-badge"></span>
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="profile.html" title="Profile" aria-label="Profile" data-test-id="menu-profile">
+            <span class="header__menu-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM4,23H20a1,1,0,0,0,1-1V18a5.006,5.006,0,0,0-5-5H8a5.006,5.006,0,0,0-5,5v4A1,1,0,0,0,4,23Zm1-5a3,3,0,0,1,3-3h8a3,3,0,0,1,3,3v3H5Z"/>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link header__menu-link--active" href="history.html" title="History" aria-label="History" data-test-id="menu-history">
+            <span class="header__menu-icon">
+              <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M400 266.667V400L483.333 483.333" stroke="currentColor" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M144.592 229.017L119.592 229.143C119.661 242.852 130.757 253.948 144.466 254.017L144.592 229.017ZM229.318 254.443C243.125 254.513 254.374 243.376 254.443 229.569C254.513 215.762 243.376 204.513 229.569 204.444L229.318 254.443ZM169.165 144.04C169.096 130.233 157.847 119.097 144.04 119.166C130.233 119.235 119.097 130.484 119.166 144.291L169.165 144.04ZM127.554 359.497C129.429 345.817 119.859 333.209 106.18 331.334C92.501 329.459 79.8916 339.027 78.0166 352.707L127.554 359.497ZM628.74 171.259C501.4 43.9193 295.624 42.6297 169.127 169.127L204.482 204.482C311.119 97.8453 485.237 98.465 593.387 206.614L628.74 171.259ZM171.259 628.74C298.599 756.08 504.377 757.37 630.873 630.873L595.517 595.517C488.88 702.153 314.764 701.537 206.614 593.387L171.259 628.74ZM630.873 630.873C757.37 504.377 756.08 298.599 628.74 171.259L593.387 206.614C701.537 314.764 702.153 488.88 595.517 595.517L630.873 630.873ZM169.127 169.127L126.914 211.34L162.27 246.695L204.482 204.482L169.127 169.127ZM144.466 254.017L229.318 254.443L229.569 204.444L144.718 204.018L144.466 254.017ZM169.592 228.892L169.165 144.04L119.166 144.291L119.592 229.143L169.592 228.892ZM78.0166 352.707C64.6356 450.33 95.7973 553.28 171.259 628.74L206.614 593.387C142.595 529.367 116.221 442.173 127.554 359.497L78.0166 352.707Z"
+                      fill="currentColor"/>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <button class="header__menu-link header__menu-link--theme" type="button" title="Switch theme" aria-label="Switch theme" data-test-id="theme-toggle">
+            <span class="header__menu-icon">
+              <svg class="theme-icon theme-icon--sun" data-js-sun-icon viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1C11 0.447715 11.4477 0 12 0C12.5523 0 13 0.447715 13 1V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V1Z" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12ZM8.06167 12C8.06167 14.1751 9.82492 15.9383 12 15.9383C14.1751 15.9383 15.9383 14.1751 15.9383 12C15.9383 9.82492 14.1751 8.06167 12 8.06167C9.82492 8.06167 8.06167 9.82492 8.06167 12Z" fill="currentColor"/>
+                <path d="M20.4853 3.51472C20.0947 3.12419 19.4616 3.12419 19.0711 3.51472L17.6568 4.92893C17.2663 5.31946 17.2663 5.95262 17.6568 6.34315C18.0474 6.73367 18.6805 6.73367 19.0711 6.34315L20.4853 4.92893C20.8758 4.53841 20.8758 3.90524 20.4853 3.51472Z" fill="currentColor"/>
+                <path d="M1 13C0.447715 13 0 12.5523 0 12C0 11.4477 0.447715 11 1 11H3C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13H1Z" fill="currentColor"/>
+                <path d="M3.51472 3.51472C3.1242 3.90524 3.1242 4.53841 3.51472 4.92893L4.92894 6.34315C5.31946 6.73367 5.95263 6.73367 6.34315 6.34315C6.73368 5.95262 6.73368 5.31946 6.34315 4.92893L4.92894 3.51472C4.53841 3.12419 3.90525 3.12419 3.51472 3.51472Z" fill="currentColor"/>
+                <path d="M11 21C11 20.4477 11.4477 20 12 20C12.5523 20 13 20.4477 13 21V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V21Z" fill="currentColor"/>
+                <path d="M6.34315 17.6569C5.95263 17.2663 5.31946 17.2663 4.92894 17.6569L3.51473 19.0711C3.1242 19.4616 3.1242 20.0948 3.51473 20.4853C3.90525 20.8758 4.53842 20.8758 4.92894 20.4853L6.34315 19.0711C6.73368 18.6805 6.73368 18.0474 6.34315 17.6569Z" fill="currentColor"/>
+                <path d="M21 13C20.4477 13 20 12.5523 20 12C20 11.4477 20.4477 11 21 11H23C23.5523 11 24 11.4477 24 12C24 12.5523 23.5523 13 23 13H21Z" fill="currentColor"/>
+                <path d="M17.6568 17.6569C17.2663 18.0474 17.2663 18.6805 17.6568 19.0711L19.0711 20.4853C19.4616 20.8758 20.0947 20.8758 20.4853 20.4853C20.8758 20.0948 20.8758 19.4616 20.4853 19.0711L19.0711 17.6569C18.6805 17.2663 18.0474 17.2663 17.6568 17.6569Z" fill="currentColor"/>
+              </svg>
+              <svg class="theme-icon theme-icon--moon" data-js-moon-icon viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 17C10.952 18.6176 16.6829 8.75775 11 3C16.0007 3.13144 20 7.11149 20 12C20 16.9715 16.1188 21 11 21C7.77111 21 4.65938 19.4319 3 17Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__field">
+      <label class="visually-hidden" for="search-products">Search products</label>
+      <input class="header__field-input" id="search-products" placeholder="Search products..." autocomplete="off" />
+    </div>
+  </div>
+</header>
+<main>
+  <section class="history" data-js-history>
+    <div class="history__inner container">
+      <h1 class="history__title" data-test-id="history-title">Order History</h1>
+      <div class="history__content" data-js-history-content></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
