@@ -29,6 +29,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 640px;
+  max-height: 95vh;
   background-color: var(--color-surface);
   translate: 24px 0;
   scale: 0.98;
@@ -50,20 +51,21 @@
 }
 
 .modal__body {
-  padding: var(--space-32);
-  row-gap: 25px;
+  padding: 16px;
+  row-gap: 14px;
+  overflow-y: auto;
 }
 
 .modal__content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .modal__image {
   width: 100%;
-  height: 100%;
-  max-height: 340px;
+  height: auto;
+  max-height: 230px;
   object-fit: cover;
 }
 
@@ -74,19 +76,18 @@
 }
 
 .modal__title {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
 }
 
 .modal__category {
   font-size: var(--font-size-base);
-  letter-spacing: var(--letter-spacing-md);
   text-transform: uppercase;
   color: var(--color-text-secondary);
 }
 
 .modal__description {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   line-height: var(--line-height);
   color: var(--color-text-secondary);
 }
@@ -94,20 +95,20 @@
 .modal__footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  gap: var(--space-16);
+  justify-content: start;
+  align-items: stretch;
+  gap: var(--space-12);
   margin-top: auto;
 }
 
 .modal__price {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
 }
 
 .modal__button {
-  padding: var(--space-12) var(--space-24);
+  padding: 10px 20px;
   color: var(--color-btn-primary-text);
   background-color: var(--color-primary);
   font-size: var(--font-size-base);
@@ -132,8 +133,8 @@
 
 .modal__close {
   position: absolute;
-  top: var(--space-16);
-  right: var(--space-16);
+  top: var(--space-12);
+  right: var(--space-12);
   width: var(--size-32);
   height: var(--size-32);
   display: grid;
@@ -184,28 +185,28 @@
 
 @media (max-width: 1023px) {
   .modal__card {
-    max-width: 560px;
+    max-width: 520px;
     translate: 16px 0;
   }
 
-  .modal__body {
-    padding: var(--space-24);
+  .modal__image {
+    max-height: 180px;
   }
 
   .modal__title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .modal__description {
-    font-size: var(--font-size-base);
-  }
-
-  .modal__price {
     font-size: var(--font-size-xl);
   }
 
+  .modal__description {
+    font-size: var(--font-size-sm);
+  }
+
+  .modal__price {
+    font-size: var(--font-size-lg);
+  }
+
   .modal__button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     font-size: var(--font-size-sm);
   }
 
@@ -228,21 +229,21 @@
 @media (max-width: 768px) {
   .modal__card {
     grid-template-columns: 1fr;
-    max-width: 370px;
+    max-width: 360px;
     translate: 40px;
   }
 
   .modal__image {
-    max-height: var(--size-220);
+    max-height: 200px;
   }
 
   .modal__body {
-    padding: var(--space-24);
+    padding: var(--space-16);
+    row-gap: 12px;
   }
 
   .modal__footer {
-    flex-direction: column;
-    align-items: stretch;
+    gap: var(--space-8);
   }
 
   .modal__button {
